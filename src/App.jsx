@@ -10,11 +10,12 @@ import {
   SearchInput,
   SearchButton,
   LocationTime,
-  TimeDisplay
+  TimeDisplay,
+  UnitToggle
 } from './styles/App.styles';
 
 const WeatherApp = () => {
-  const { city, setCity, weatherData, setError, isLoading } = useWeather();
+  const { city, setCity, weatherData, setError, isLoading, unit, setUnit } = useWeather();
   const [inputValue, setInputValue] = useState('');
   const [localTime, setLocalTime] = useState('');
 
@@ -33,6 +34,10 @@ const WeatherApp = () => {
       await validateCity(inputValue.trim());
       setInputValue('');
     }
+  };
+
+  const handleUnitToggle = () => {
+    setUnit(unit === 'metric' ? 'imperial' : 'metric');
   };
 
   useEffect(() => {
@@ -72,8 +77,11 @@ const WeatherApp = () => {
             aria-label="Search weather"
             disabled={isLoading}
           >
-            {isLoading ? 'Searching...' : 'Search'}
+            Search
           </SearchButton>
+          <UnitToggle onClick={handleUnitToggle} disabled={isLoading}>
+            {unit === 'metric' ? '°C' : '°F'}
+          </UnitToggle>
         </SearchForm>
         <LocationTime>
           <p style={{ textTransform: 'capitalize' }}>{city || 'Select a city'}</p>

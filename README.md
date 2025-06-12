@@ -2,6 +2,11 @@
 
 A modern weather dashboard built with React.js that displays real-time weather information for any city.
 
+## How I Approached the Assignment
+
+I started by setting up the project using Vite and React, creating a basic structure for components. I then implemented the core features one by one, focusing on getting the basic weather search and display functionality working. This involved integrating with the OpenWeatherMap API and setting up the initial UI components. As the application grew, I introduced React Context for centralized state management. Finally, I focused on optimizing the codebase by applying DRY principles to refactor duplicated code and styles, and ensuring robust error handling throughout the application.
+
+
 ## Features
 
 - Search for weather by city name
@@ -61,7 +66,3 @@ src/
   ├── App.jsx
   └── main.jsx
 ```
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!

@@ -61,7 +61,7 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  padding: 0.8rem 1.5rem;
+  padding: 0.9rem 1.5rem;
   font-size: 1.1rem;
   background-color: #007bff;
   color: white;
@@ -85,4 +85,20 @@ export const LocationTime = styled.div`
 export const TimeDisplay = styled.div`
   font-size: 1rem;
   opacity: 0.9;
+`;
+
+export const UnitToggle = styled.button`
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 `; 
